@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
+import { AntDesign } from '@expo/vector-icons'
 
 type MyProps = {
     conversas?: boolean, 
@@ -13,7 +14,10 @@ export default function Navegacao({ conversas, status, chamada }: MyProps){
 
     return(
         <View style={styles.area}>
-            <Text>logo</Text>
+            <AntDesign 
+                    name="camera"
+                    color={'#7cb574'}
+                    size={27} />
             <Text style={styles.conversas}>CONVERSAS</Text>
             <Text style={styles.status}>STATUS</Text>
             <Text style={styles.chamada}>CHAMADAS</Text>
@@ -25,27 +29,44 @@ export default function Navegacao({ conversas, status, chamada }: MyProps){
 const stylesFunc = ({ conversas, status, chamada }: MyProps) => StyleSheet.create({
     area: {
         backgroundColor: '#16914b',
+        paddingHorizontal: 15,
+        paddingBottom: 0,
+        elevation: 3,
         flexDirection: 'row',
-        padding: 10,
         justifyContent: 'space-between',
-        elevation: 3
     },
     conversas: {
-        color: conversas ? '#FFFFFF' : '#6C9167',
-        borderBottomColor: '#FFFFFF',
-        borderBottomWidth: 5,
+        color: conversas ? '#FFFFFF' : '#7cb574',
+        borderBottomColor: conversas ? '#FFFFFF' : '',
+        borderBottomWidth: conversas ? 5 : 0,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
         fontSize: 16,
-        fontWeight: 'bold'
+        margin: 0,
+        marginTop: conversas ? 0 : -1,
+        fontWeight: 'bold',
     },
     status: {
-        color: status ? '#FFFFFF' : '#6C9167',
+        color: status ? '#FFFFFF' : '#7cb574',
+        borderBottomColor: status ? '#FFFFFF' : '',
+        borderBottomWidth: status ? 5 : 0,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
         fontSize: 16,
-        fontWeight: 'bold'
+        margin: 0,
+        marginTop: status ? 0 : -1,
+        fontWeight: 'bold',
     }
     ,
     chamada: {
-        color: chamada ? '#FFFFFF' : '#6C9167',
+        color: chamada ? '#FFFFFF' : '#7cb574',
+        borderBottomColor: chamada ? '#FFFFFF' : '',
+        borderBottomWidth: chamada ? 5 : 0,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
         fontSize: 16,
-        fontWeight: 'bold'
+        margin: 0,
+        marginTop: chamada ? 0 : -1,
+        fontWeight: 'bold',
     }
 })

@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
+import { MaterialIcons, Entypo } from '@expo/vector-icons';
 
 export default function Nav(){
 
@@ -8,10 +9,16 @@ export default function Nav(){
             <Text style={styles.logo}>WhatsApp</Text>
             <View style={styles.areaBotoes}>
             <TouchableOpacity>
-                <Text style={styles.logo}>Lupa</Text>
+                <MaterialIcons 
+                    name="search"
+                    color={'#FFFFFF'}
+                    size={27} />
             </TouchableOpacity>
             <TouchableOpacity>
-            <Text style={styles.logo}>:</Text>
+            <Entypo 
+                    name="dots-three-vertical"
+                    color={'#FFFFFF'}
+                    size={20} />
             </TouchableOpacity>
             </View>
         </View>
