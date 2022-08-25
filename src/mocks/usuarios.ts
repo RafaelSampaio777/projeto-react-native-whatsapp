@@ -13,7 +13,7 @@ const usuarios = {
         },
         {
             id: 2,
-            nome: "Lucas",
+            nome: "Fabi-não-mais-front",
             imagem: fotoPerfil,
             telefone: "+55 11 98908-9089",
             status: "WhatsApp é muito bom.",
@@ -131,6 +131,33 @@ const usuarios = {
         {
             id: 15,
             nome: "Cássio",
+            imagem: fotoPerfil,
+            telefone: "+55 11 99999-1910",
+            status: "Copa do Brasil 22",
+            ultimaMensagem: "Tranquilo, até mais",
+            data: "23/08/2022"
+        },
+        {
+            id: 16,
+            nome: "Roger Guedes",
+            imagem: fotoPerfil,
+            telefone: "+55 11 99999-1910",
+            status: "Copa do Brasil 22",
+            ultimaMensagem: "Tranquilo, até mais",
+            data: "23/08/2022"
+        },
+        {
+            id: 17,
+            nome: "Yuri Alberto",
+            imagem: fotoPerfil,
+            telefone: "+55 11 99999-1910",
+            status: "Copa do Brasil 22",
+            ultimaMensagem: "Tranquilo, até mais",
+            data: "23/08/2022"
+        },
+        {
+            id: 18,
+            nome: "Willian",
             imagem: fotoPerfil,
             telefone: "+55 11 99999-1910",
             status: "Copa do Brasil 22",

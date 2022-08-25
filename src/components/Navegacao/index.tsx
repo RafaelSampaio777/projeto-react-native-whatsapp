@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
-import { AntDesign } from '@expo/vector-icons'
+import { FontAwesome } from '@expo/vector-icons'
 
 type MyProps = {
     conversas?: boolean, 
@@ -14,10 +14,12 @@ export default function Navegacao({ conversas, status, chamada }: MyProps){
 
     return(
         <View style={styles.area}>
-            <AntDesign 
+            <FontAwesome 
                     name="camera"
-                    color={'#7cb574'}
-                    size={27} />
+                    color={'#B3D9D2'}
+                    size={21}
+                    style={styles.camera}
+            />
             <Text style={styles.conversas}>CONVERSAS</Text>
             <Text style={styles.status}>STATUS</Text>
             <Text style={styles.chamada}>CHAMADAS</Text>
@@ -28,17 +30,21 @@ export default function Navegacao({ conversas, status, chamada }: MyProps){
 
 const stylesFunc = ({ conversas, status, chamada }: MyProps) => StyleSheet.create({
     area: {
-        backgroundColor: '#16914b',
+        backgroundColor: '#04856D',
         paddingHorizontal: 15,
         paddingBottom: 0,
-        elevation: 3,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
+    camera: {
+        margin: 0,
+        marginTop: 7,
+        paddingRight: 10
+    },
     conversas: {
-        color: conversas ? '#FFFFFF' : '#7cb574',
-        borderBottomColor: conversas ? '#FFFFFF' : '',
-        borderBottomWidth: conversas ? 5 : 0,
+        color: conversas ? '#efffff' : '#B3D9D2',
+        borderBottomColor: conversas ? '#efffff' : '',
+        borderBottomWidth: conversas ? 2 : 0,
         paddingVertical: 10,
         paddingHorizontal: 15,
         fontSize: 16,
@@ -47,9 +53,9 @@ const stylesFunc = ({ conversas, status, chamada }: MyProps) => StyleSheet.creat
         fontWeight: 'bold',
     },
     status: {
-        color: status ? '#FFFFFF' : '#7cb574',
-        borderBottomColor: status ? '#FFFFFF' : '',
-        borderBottomWidth: status ? 5 : 0,
+        color: status ? '#efffff' : '#B3D9D2',
+        borderBottomColor: status ? '#efffff' : '',
+        borderBottomWidth: status ? 2 : 0,
         paddingVertical: 10,
         paddingHorizontal: 15,
         fontSize: 16,
@@ -59,9 +65,9 @@ const stylesFunc = ({ conversas, status, chamada }: MyProps) => StyleSheet.creat
     }
     ,
     chamada: {
-        color: chamada ? '#FFFFFF' : '#7cb574',
-        borderBottomColor: chamada ? '#FFFFFF' : '',
-        borderBottomWidth: chamada ? 5 : 0,
+        color: chamada ? '#efffff' : '#B3D9D2',
+        borderBottomColor: chamada ? '#efffff' : '',
+        borderBottomWidth: chamada ? 2 : 0,
         paddingVertical: 10,
         paddingHorizontal: 15,
         fontSize: 16,

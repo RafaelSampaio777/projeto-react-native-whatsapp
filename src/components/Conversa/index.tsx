@@ -29,14 +29,14 @@ export default function Conversa({ imagem, nome, data, ultimaMensagem }: MyProps
 
 const styles = StyleSheet.create({
     area: {
-        margin: '5%',
+        margin: '3%',
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center'
     },
     imagem: {
-        width: '15%',
-        height: width * 0.15,
+        width: '17%',
+        height: width * 0.17,
         borderRadius: 60
     },
     areaInfo: {
@@ -47,14 +47,14 @@ const styles = StyleSheet.create({
         paddingLeft: '2%'
     },
     textoNome: {
-        color: '#000000',
+        color: '#0e1111',
         fontSize: 18,
         fontWeight: 'bold',
         margin: 0,
         paddingBottom: '2%'
     },
     textos: {
-        color: '#A1A1A1',
+        color: '#8494a1',
         margin: 0
     }
 })
