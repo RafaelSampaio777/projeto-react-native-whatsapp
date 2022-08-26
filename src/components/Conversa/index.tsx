@@ -7,13 +7,14 @@ type MyProps = {
     nome: string,
     data: string,
     ultimaMensagem: string,
-    imagem: any
+    imagem: any,
+    id: number
 }
 
-export default function Conversa({ imagem, nome, data, ultimaMensagem }: MyProps) {
+export default function Conversa({ imagem, nome, data, ultimaMensagem, id }: MyProps) {
 
     return (
-        <TouchableOpacity style={styles.area}>
+        <TouchableOpacity style={styles.area} key={ id }>
             <Image source={imagem} style={styles.imagem} />
             <View style={styles.areaInfo}>
                 <View>
@@ -49,13 +50,14 @@ const styles = StyleSheet.create({
     textoNome: {
         color: '#0e1111',
         fontSize: 18,
-        fontWeight: 'bold',
         margin: 0,
-        paddingBottom: '2%'
+        paddingBottom: '2%',
+        fontFamily: "OpenSansSemiBold"
     },
     textos: {
         color: '#8494a1',
-        margin: 0
+        margin: 0,
+        fontFamily: "OpenSans"
     }
 })
 

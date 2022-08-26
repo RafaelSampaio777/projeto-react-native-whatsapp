@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { FlatList, Text } from 'react-native';
+import React from "react";
+import { FlatList } from 'react-native';
 import Conversa from "../Conversa";
 import useUsuarios from "../../hooks/useUsuarios";
 
@@ -11,8 +11,7 @@ export default function Conversas() {
 
     return(
         <FlatList 
-            data={lista} 
-            keyExtractor={ ({id}: any) => id }
+            data={lista}
             renderItem={ itensLista } />
     )
 

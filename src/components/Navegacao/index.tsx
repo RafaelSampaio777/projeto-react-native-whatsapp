@@ -20,9 +20,9 @@ export default function Navegacao({ conversas, status, chamada }: MyProps){
                     size={21}
                     style={styles.camera}
             />
-            <Text style={styles.conversas}>CONVERSAS</Text>
-            <Text style={styles.status}>STATUS</Text>
-            <Text style={styles.chamada}>CHAMADAS</Text>
+            <Text style={[styles.conversas, styles.texto]}>CONVERSAS</Text>
+            <Text style={[styles.status, styles.texto]}>STATUS</Text>
+            <Text style={[styles.chamada, styles.texto]}>CHAMADAS</Text>
         </View>
     )
 
@@ -36,43 +36,35 @@ const stylesFunc = ({ conversas, status, chamada }: MyProps) => StyleSheet.creat
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
+    texto:{
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        fontSize: 16,
+        margin: 0,
+        fontFamily: "OpenSansSemiBold",
+    },
     camera: {
         margin: 0,
-        marginTop: 7,
+        marginTop: 9,
         paddingRight: 10
     },
     conversas: {
         color: conversas ? '#efffff' : '#B3D9D2',
         borderBottomColor: conversas ? '#efffff' : '',
         borderBottomWidth: conversas ? 2 : 0,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        fontSize: 16,
-        margin: 0,
         marginTop: conversas ? 0 : -1,
-        fontWeight: 'bold',
     },
     status: {
         color: status ? '#efffff' : '#B3D9D2',
         borderBottomColor: status ? '#efffff' : '',
         borderBottomWidth: status ? 2 : 0,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        fontSize: 16,
-        margin: 0,
         marginTop: status ? 0 : -1,
-        fontWeight: 'bold',
     }
     ,
     chamada: {
         color: chamada ? '#efffff' : '#B3D9D2',
         borderBottomColor: chamada ? '#efffff' : '',
         borderBottomWidth: chamada ? 2 : 0,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        fontSize: 16,
-        margin: 0,
         marginTop: chamada ? 0 : -1,
-        fontWeight: 'bold',
     }
 })
