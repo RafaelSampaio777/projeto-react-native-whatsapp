@@ -1,14 +1,27 @@
-import { StatusBar } from 'react-native';
+import { StatusBar, FlatList } from 'react-native';
 import Nav from '../../components/Nav';
-import Conversas from '../../components/Conversas';
+import Conversa from "../../components/Conversa";
+import useUsuarios from "../../hooks/useUsuarios";
 
-export default function TelaConversas() {
+type MyProps = {
+  navigation: any
+}
+
+export default function TelaConversas({ navigation }: MyProps) {
+
+  const [lista] = useUsuarios();
+
+  const itensLista = ({ item }: any) => <Conversa {...item} onPress={() => {
+    navigation.navigate('conversa', item)}} />
 
   return (
     <>
       <StatusBar backgroundColor={'#04856D'} />
       <Nav />
-      <Conversas />
+      <FlatList
+        data={lista}
+        renderItem={itensLista}
+      />
     </>
   );
 }

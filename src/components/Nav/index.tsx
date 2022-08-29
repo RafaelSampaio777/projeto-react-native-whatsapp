@@ -36,12 +36,12 @@ const styles = StyleSheet.create({
     area: {
         backgroundColor: '#04856D',
         padding: 20,
-        paddingBottom: 30,
+        paddingBottom: 25,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
     logo: {
-        fontSize: 23,
+        fontSize: 21,
         color: '#efffff',
         fontFamily: 'OpenSansBold'
     },

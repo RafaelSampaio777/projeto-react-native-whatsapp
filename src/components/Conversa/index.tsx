@@ -8,13 +8,18 @@ type MyProps = {
     data: string,
     ultimaMensagem: string,
     imagem: any,
-    id: number
+    id: number,
+    onPress: any
 }
 
-export default function Conversa({ imagem, nome, data, ultimaMensagem, id }: MyProps) {
+export default function Conversa({ imagem, nome, data, ultimaMensagem, id, onPress }: MyProps) {
 
     return (
-        <TouchableOpacity style={styles.area} key={ id }>
+        <TouchableOpacity 
+            style={styles.area} 
+            key={ id }
+            onPress={ onPress } 
+        >
             <Image source={imagem} style={styles.imagem} />
             <View style={styles.areaInfo}>
                 <View>

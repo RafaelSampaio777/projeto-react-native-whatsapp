@@ -1,5 +1,5 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
-import TelaConversas from './src/screens/TelaConversas';
+import { Routes } from './src/routes';
 import { useFonts, OpenSans_700Bold, OpenSans_400Regular, OpenSans_600SemiBold } from '@expo-google-fonts/open-sans'
 //import AppLoading from "expo-app-loading";
 
@@ -18,7 +18,8 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.app}>
-      <TelaConversas />
+      {/*<TelaConversas />*/}
+      <Routes />
     </SafeAreaView>
   );
 }

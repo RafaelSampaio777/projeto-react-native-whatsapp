@@ -35,6 +35,7 @@ const stylesFunc = ({ conversas, status, chamada }: MyProps) => StyleSheet.creat
         paddingBottom: 0,
         flexDirection: 'row',
         justifyContent: 'space-between',
+        alignItems: 'flex-start'
     },
     texto:{
         paddingVertical: 10,
@@ -46,25 +47,23 @@ const stylesFunc = ({ conversas, status, chamada }: MyProps) => StyleSheet.creat
     camera: {
         margin: 0,
         marginTop: 9,
-        paddingRight: 10
+        paddingRight: 10,
+        marginLeft: -10
     },
     conversas: {
         color: conversas ? '#efffff' : '#B3D9D2',
         borderBottomColor: conversas ? '#efffff' : '',
-        borderBottomWidth: conversas ? 2 : 0,
-        marginTop: conversas ? 0 : -1,
+        borderBottomWidth: conversas ? 2 : 0
     },
     status: {
         color: status ? '#efffff' : '#B3D9D2',
         borderBottomColor: status ? '#efffff' : '',
-        borderBottomWidth: status ? 2 : 0,
-        marginTop: status ? 0 : -1,
+        borderBottomWidth: status ? 2 : 0
     }
     ,
     chamada: {
         color: chamada ? '#efffff' : '#B3D9D2',
         borderBottomColor: chamada ? '#efffff' : '',
-        borderBottomWidth: chamada ? 2 : 0,
-        marginTop: chamada ? 0 : -1,
+        borderBottomWidth: chamada ? 2 : 0
     }
 })
