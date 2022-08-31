@@ -4,23 +4,25 @@ const {Screen, Navigator} = createNativeStackNavigator();
 
 import TelaConversas from "../screens/TelaConversas";
 import Chat from "../screens/Chat";
+import Perfil from "../screens/Perfil";
+import { setStatusBarHidden } from "expo-status-bar";
 
 export function RotaConversas(){
     return(
-        <Navigator>
+        <Navigator screenOptions={{ 
+            headerShown: false
+         }} >
             <Screen 
                 name= "home"
-                component={ TelaConversas } 
-                options={{
-                    headerShown: false
-                }}
+                component={ TelaConversas }
             />
             <Screen 
                 name= "conversa"
-                component={ Chat }
-                options={{
-                    headerShown: false
-                }} 
+                component={ Chat } 
+            />
+            <Screen 
+                name= "perfil"
+                component={ Perfil }
             />
         </Navigator>
     )

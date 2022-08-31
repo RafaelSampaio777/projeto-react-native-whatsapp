@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     imagem: {
-        width: '17%',
-        height: width * 0.17,
+        width: '13%',
+        height: width * 0.13,
         borderRadius: 60
     },
     areaInfo: {

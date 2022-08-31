@@ -15,7 +15,6 @@ export default function App() {
     return <SafeAreaView />
   }
 
-
   return (
     <SafeAreaView style={styles.app}>
       {/*<TelaConversas />*/}

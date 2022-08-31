@@ -1,17 +1,16 @@
 import React from "react";
-import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Foundation, Entypo, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
-
-const width = Dimensions.get('screen').width
 
 type MyProps = {
     nome: string,
     imagem: any,
-    id: number
+    id: number,
+    onPress: any
 }
 
-export default function HeaderChat({ imagem, nome, id }: MyProps) {
+export default function HeaderChat({ imagem, nome, id, onPress }: MyProps) {
 
     const navigation = useNavigation();
 
@@ -27,7 +26,11 @@ export default function HeaderChat({ imagem, nome, id }: MyProps) {
                         color="#EFFFFF" />
                     {<Image source={imagem} style={styles.imagem} />}
                 </TouchableOpacity>
-                <TouchableOpacity key={id} style={styles.botaoPerfil}>
+                <TouchableOpacity 
+                    key={id} 
+                    style={styles.botaoPerfil}
+                    onPress={onPress}
+                >
                     <Text style={styles.textoPerfil}>{nome}</Text>
                 </TouchableOpacity>
             </View>
@@ -35,7 +38,7 @@ export default function HeaderChat({ imagem, nome, id }: MyProps) {
                 <TouchableOpacity>
                     <FontAwesome
                         name="video-camera"
-                        size={24}
+                        size={21}
                         color="#EFFFFF" />
                 </TouchableOpacity>
                 <TouchableOpacity>
@@ -47,7 +50,7 @@ export default function HeaderChat({ imagem, nome, id }: MyProps) {
                 <TouchableOpacity>
                     <Entypo
                         name="dots-three-vertical"
-                        size={22}
+                        size={21}
                         color="#EFFFFF" />
                 </TouchableOpacity>
             </View>

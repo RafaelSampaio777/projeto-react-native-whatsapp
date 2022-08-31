@@ -2,7 +2,7 @@ import { StatusBar } from 'react-native';
 import HeaderChat from '../../components/HeaderChat';
 import { useRoute } from '@react-navigation/native';
 
-export default function Chat() {
+export default function Chat({navigation}: any) {
 
   const route = useRoute();
 
@@ -11,7 +11,8 @@ export default function Chat() {
   return (
     <>
       <StatusBar backgroundColor={'#04856D'} />
-      <HeaderChat nome={nome} imagem={imagem} id={id} />
+      <HeaderChat nome={nome} imagem={imagem} id={id} onPress={() => {
+    navigation.navigate('perfil', route.params)}} />
     </>
   );
 }
