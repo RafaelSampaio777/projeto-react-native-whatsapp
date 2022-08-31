@@ -53,17 +53,17 @@ const stylesFunc = ({ conversas, status, chamada }: MyProps) => StyleSheet.creat
     conversas: {
         color: conversas ? '#efffff' : '#B3D9D2',
         borderBottomColor: conversas ? '#efffff' : '',
-        borderBottomWidth: conversas ? 2 : 0
+        borderBottomWidth: conversas ? 3 : 0
     },
     status: {
         color: status ? '#efffff' : '#B3D9D2',
         borderBottomColor: status ? '#efffff' : '',
-        borderBottomWidth: status ? 2 : 0
+        borderBottomWidth: status ? 3 : 0
     }
     ,
     chamada: {
         color: chamada ? '#efffff' : '#B3D9D2',
         borderBottomColor: chamada ? '#efffff' : '',
-        borderBottomWidth: chamada ? 2 : 0
+        borderBottomWidth: chamada ? 3 : 0
     }
 })
