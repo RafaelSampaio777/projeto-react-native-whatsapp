@@ -31,7 +31,7 @@ const usuarios = {
         },
         {
             id: 4,
-            nome: "Marcos",
+            nome: "Léo",
             imagem: fotoPerfil,
             telefone: "+55 11 91111-9999",
             status: ".",
